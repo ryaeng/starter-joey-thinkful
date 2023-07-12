@@ -1,0 +1,9 @@
+h1 {
+    font-size: 52px;
+}
+
+@media all and (min-width: 800px) {
+    h1 {
+        font-size: 48px;
+    }
+}
