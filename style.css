@@ -14,6 +14,8 @@ header h1 {
     text-align: center;
     /* Removes the default margin and spacing around the `h1` element */
     margin: 0;
+    /* Pushes the text down 20 pixels from the top of the page */
+    padding-top: 20px;
 }
 
 header nav ul li a {
