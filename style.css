@@ -1,12 +1,28 @@
+header {
+    /* Sets background color to dark blue */
+    background-color: #0B1C51;
+    /* Adds 40 pixels of space under the header
+       so that the main content isn't so close
+       to the navigation. */
+    margin-bottom: 40px;
+}
+
 header h1 {
+    /* Set font size to 52 pixels */
     font-size: 52px;
+    /* Centers the text */
+    text-align: center;
+    /* Removes the default margin and spacing around the `h1` element */
+    margin: 0;
 }
 
 header nav ul li a {
+    /* Set font to Montserrat */
     font-family: Montserrat;
 }
 
 @media all and (min-width: 800px) {
+    /* Set font size to 48 pixels */
     h1 {
         font-size: 48px;
     }
