@@ -1,5 +1,9 @@
-h1 {
+header h1 {
     font-size: 52px;
+}
+
+header nav ul li a {
+    font-family: Montserrat;
 }
 
 @media all and (min-width: 800px) {
