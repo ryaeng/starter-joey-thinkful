@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 header {
     /* Sets background color to dark blue */
     background-color: #0B1C51;
@@ -10,22 +14,125 @@ header {
 header h1 {
     /* Set font size to 52 pixels */
     font-size: 52px;
+    /* The font color is white */
+    color: #fff;
     /* Centers the text */
     text-align: center;
-    /* Removes the default margin and spacing around the `h1` element */
+    /* Removes the default margin and spacing around 
+       the `h1` element */
     margin: 0;
-    /* Pushes the text down 20 pixels from the top of the page */
+    /* Pushes the text down 20 pixels from the top of 
+       the page */
     padding-top: 20px;
 }
 
-header nav ul li a {
-    /* Set font to Montserrat */
-    font-family: Montserrat;
+header nav {
+    /* 
+      Changes the display property from it's default 
+      to `flex` 
+    */
+    display: flex;
+
+    /* Center the navigation text */
+    justify-content: center;
 }
 
+header nav ul {
+    /* 
+      Changes the display property from it's default 
+      to `flex` 
+    */
+    display: flex;
+    /* 
+      Defaults to row. No need to define `flex-direction 
+      in this case. 
+    */
+
+    /* 
+      Removes the default padding to the left 
+      of the unordered list 
+    */
+    padding-left: 0;
+
+    /*
+      Removes the bullet points from the list
+      items in the unordered list
+    */
+    list-style: none;
+}
+
+header nav ul li a {
+    /* The link color is white */
+    color: #fff;
+    /* Removes the underlink from the links */
+    text-decoration: none;
+    /* Set font to Montserrat */
+    font-family: Montserrat;
+    /* 
+      Applies 20 pixels of margin to the right of each link
+      creating a visual gap between the navigation links
+    */
+    margin: 0 20px 0 0;
+}
+
+header nav ul li:last-child a {
+    /* 
+      Removes the margin to the right of the last anchor tag
+      so that the nav appears centered
+    */
+    margin-right: 0;
+  }
+
+/* 
+  When a web browser is larger than 800 pixels,
+  apply these rules
+*/
 @media all and (min-width: 800px) {
-    /* Set font size to 48 pixels */
-    h1 {
+    header {
+        /* Changes the default setting from block to `flex` */
+        display: flex;
+        /* 
+          Pushes items (the title and nav) to the far side 
+          of the browser with space between them
+        */
+        justify-content: space-between;
+        /* 
+          Add 0 pixels padding top and bottom, add 30
+          pixels padding left and right */
+        padding: 0 30px;
+    }
+    
+    header h1 {
+        /*
+          Sets 14 pixels of margin above and below the `h1`
+          and sets 0 pixels of margin to the left and right
+        */
+        margin: 14px 0;
+        /* Removes the padding above the `h1` */
+        padding-top: 0;
+        /* Set font size to 48 pixels */
         font-size: 48px;
+    }
+
+    header nav {
+        /* 
+          Puses the navigation container down by 8 pixels
+          to make it present a little better visuall within 
+          the space
+        */
+        margin-top: 8px;
+    }
+
+    /* 
+      Users cannot hover on mobile devices, so that is why you
+      implement this behavior only for larger screens
+    */
+    header nav ul li a:hover {
+        /* 
+            Targets the change when a user holds the pointer over the anchor tag
+            (link) within the list items within the unordered list that
+            is within the navigation that is within the header
+        */
+        color: #bdbdbd;;
     }
 }
